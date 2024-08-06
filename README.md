@@ -1,12 +1,12 @@
 # cm4io-fan
 
-This is a fork from https://github.com/neggles/cm4io-fan since it seems abandoned.
+This is a fork from https://github.com/neggles/cm4io-fan since it seems abandoned. It has been tested with Ubuntu 24.04 on a Waveshare board with a CM4.
 
-The issues/prs will be included and tested, soon
+The issues/prs from the original have been included. Kudos go to [chetbox](https://github.com/chetbox) and [lukweb](https://github.com/lukweb) for solving the issues themselves.
 
 kernel module and device tree overlay to add support for the EMC2301 fan controller on the Raspberry Pi Compute Module 4 IO Board.
 
-*Works with 5.10+ 64-bit kernels only.*
+*Works with 5.10+ and 6+ 64-bit kernels only.*
 
 Uses Traverse Technologies' EMC2301 [hwmon driver](https://gitlab.traverse.com.au/ls1088firmware/traverse-sensors) for their [ten64](https://www.crowdsupply.com/traverse-technologies/ten64) board, which you should definitely check out because it's awesome.
 
@@ -44,7 +44,7 @@ sudo apt install dkms
 ```
 mkdir -p ~/src
 cd ~/src
-git clone https://github.com/neg2led/cm4io-fan.git
+git clone https://github.com/VikingGer/cm4io-fan.git
 cd cm4io-fan
 ```
 3. Run install.sh, feel free to inspect it yourself first. It will archive the current HEAD to /usr/src with an appropriate version, and run DKMS.
