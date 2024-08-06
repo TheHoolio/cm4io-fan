@@ -1,5 +1,9 @@
 # cm4io-fan
 
+This is a fork from https://github.com/neggles/cm4io-fan since it seems abandoned.
+
+The issues/prs will be included and tested, soon
+
 kernel module and device tree overlay to add support for the EMC2301 fan controller on the Raspberry Pi Compute Module 4 IO Board.
 
 *Works with 5.10+ 64-bit kernels only.*
