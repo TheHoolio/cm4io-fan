@@ -13,12 +13,12 @@ always-y += $(dtbo-y)
 clean-files := $(dtbo-y)
 
 all:
-  cpp -nostdinc -I $(DTS_INCLUDE) -undef -x assembler-with-cpp cm4io-fan-overlay.dts cm4io-fan-overlay.dts.preprocessed
-  dtc -@ -I dts -O dtb -o cm4io-fan.dtbo cm4io-fan-overlay.dts.preprocessed
-  $(MAKE) -C $(KDIR) M=$(PWD) DTC_INCLUDE=$(DTC_INCLUDE)
+	cpp -nostdinc -I $(DTS_INCLUDE) -undef -x assembler-with-cpp cm4io-fan-overlay.dts cm4io-fan-overlay.dts.preprocessed
+	dtc -@ -I dts -O dtb -o cm4io-fan.dtbo cm4io-fan-overlay.dts.preprocessed
+	$(MAKE) -C $(KDIR) M=$(PWD) DTC_INCLUDE=$(DTC_INCLUDE)
 
 clean:
-  $(MAKE) -C $(KDIR) M=$(PWD) clean
+	$(MAKE) -C $(KDIR) M=$(PWD) clean
 
 install: $(modules_install)
 modules_install:
